@@ -1,8 +1,5 @@
 import {Navigate, Route, Routes} from 'react-router-dom';
-import Home from '../pages/Home';
-import Login from '../pages/Login';
 import Model from '../pages/Model';
-import Register from '../pages/Register';
 
 const RoutesMain = () => {
     return(

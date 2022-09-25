@@ -1,6 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const Global = createGlobalStyle`
+
+    :root {
+        --principal-bc-00: #222;
+        --principal-bc-01: #444;
+        --principal-bc-02: #666;
+    }
+
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, input, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -26,27 +33,12 @@ export const Global = createGlobalStyle`
         height: 100%;
     }
     body {
+        background-color: var(--principal-bc-00);
         min-height: 100%;
         line-height: 1;
         font-family: 'Poppins', sans-serif;
-        ::-webkit-scrollbar {
-            width: 4px;
-        }
-        ::-webkit-scrollbar-track {
-            background-color: #212529;
-        }
-        ::-webkit-scrollbar-thumb {
-            border-radius: 2px;
-            background-image: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
-        }
-        ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-        }
     }
-    body, input {
-        font-family: 'Poppins', sans-serif;
-        background-color: var(--grey-00);
-    }
+   
     article, aside, details, figcaption, figure, 
     footer, header, hgroup, menu, nav, section {
         display: block;
@@ -66,7 +58,17 @@ export const Global = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
-    :root{
-        ${DarkTheme}
-    }
+`;
+
+export const DefaultContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+`;
+
+export const DefaultContent = styled.div`
+    width: 100%;
+    max-width: 1200px;
 `;

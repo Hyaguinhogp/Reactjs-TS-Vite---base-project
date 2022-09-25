@@ -1,6 +1,12 @@
+import { ModelContainer, ModelContent } from "./styles";
+
 const Model = () => {
     return(
-        <h1>Model</h1>
+        <ModelContainer>
+            <ModelContent>
+                <h1>Model</h1>
+            </ModelContent>
+        </ModelContainer>
     )
 }
 
